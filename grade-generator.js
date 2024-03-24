@@ -9,7 +9,7 @@
 - D - 40 to 49
 - E - less than 40.
  */
-
+//this functions determines the grade based on marks
 function grade( marks){
 
 	let grade
@@ -24,8 +24,10 @@ function grade( marks){
 	if(marks<=39){
 		return grade ='E'}
 }
+//this function validates the marks entered and moves on to get the grade using the grade function.
 function valMarks(marks){
 	if(marks>=0 && marks <=100){
+//use the grade function to find the grade.
 		return  grade(marks)
 	} else{
 		return "enter valid marks"

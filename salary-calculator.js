@@ -1,7 +1,9 @@
 ////taxes 
 function netSalary(basic,benefits){
 	let tax,nhif,net,nssf
-	 gross=basic+benefits
+//finding the gross salary
+	gross=basic+benefits
+//finding paye
 	tax = (gross)=>{
 		if(gross<=24000){
 			return gross*0.01
@@ -20,7 +22,7 @@ function netSalary(basic,benefits){
 		}
 
 	}
-
+//finding nhif deductions.
 	nhif=(gross)=>{
 		if(gross<=5999){
 			return 150
@@ -71,7 +73,8 @@ function netSalary(basic,benefits){
             return 1700
         }
 	}
-     nssf=(gross)=>{
+//finding the nssf deductions
+    nssf=(gross)=>{
     let nssf
     if(gross<=7000){
         nssf = 0.06* gross
@@ -83,10 +86,10 @@ function netSalary(basic,benefits){
 
 }
 
-
+// finding the net salary
 net = gross -(tax(gross)+nhif(gross)+nssf(gross))
 return net
 
 }
-console.log(netSalary(50000,40000))
+console.log(netSalary(50000,6000))
 
