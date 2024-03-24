@@ -11,7 +11,9 @@ Write a program that prompts the user to input student marks. The input should b
 - D - 40 to 49
 - E - less than 40.
 
-solution pseudocode
+PSEUDOCODE SOLUTION.
+
+
     funtion grade(marks):
 		LET grade
 		IF: marks > 79
@@ -36,17 +38,17 @@ Write a program that takes as input the speed of a car e.g 80. If the speed is l
 
 For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
 
-SOLUTION PSEUDOCODE
+PSEUDOCODE SOLUTION.
 
-SPEED DETECTOR
-	FUNCTION: speedDetector: INPUT speed:
-		demeritPoints = 1*((speed-70)/5)
-		IF: speed <=70
-			return 'ok'
-		ELSE IF:demeritPoints<12
-			RETURN: demeritPoints.
-		ELSE: demeritPoints >= 12
-			RETURN: "License suspended"
+    SPEED DETECTOR
+        FUNCTION: speedDetector: INPUT speed:
+            demeritPoints = 1*((speed-70)/5)
+            IF: speed <=70
+                return 'ok'
+            ELSE IF:demeritPoints<12
+                RETURN: demeritPoints.
+            ELSE: demeritPoints >= 12
+                RETURN: "License suspended"
 
 
 Challenge 3: Net Salary Calculator
