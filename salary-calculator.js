@@ -1,6 +1,6 @@
 ////taxes 
 function netSalary(basic,benefits){
-	let tax,nhif,net
+	let tax,nhif,net,nssf
 	 gross=basic+benefits
 	tax = (gross)=>{
 		if(gross<=24000){
@@ -71,10 +71,22 @@ function netSalary(basic,benefits){
             return 1700
         }
 	}
+     nssf=(gross)=>{
+    let nssf
+    if(gross<=7000){
+        nssf = 0.06* gross
+        return nssf
+    }else if(gross>7000){
+        nssf = 0.06*7000 + 0.06*(gross-7000)
+        return nssf
+    }
+
+}
 
 
-net = gross -(tax(gross)+nhif(gross))
+net = gross -(tax(gross)+nhif(gross)+nssf(gross))
 return net
 
 }
 console.log(netSalary(50000,40000))
+

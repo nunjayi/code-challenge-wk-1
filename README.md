@@ -97,6 +97,12 @@ PSEUDOCODE SOLUTION.
 			IF:gross>79999&& <=79999
 			IF:gross>89999&& <=89999
 			IF:gross>99999&& <=99999
+        nssf:
+            nssf
+            IF: GROSS<=7000
+                RETURN: nssf = 0.06*gross
+            IF: gross >7000
+                RETURN: nssf = 0.06*7000+0.06*(gross-7000)
 
 		netSalaray =gross-(tax+Nssf+nhif)
 		RETURN netSalary
