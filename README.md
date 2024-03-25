@@ -99,7 +99,7 @@ PSEUDOCODE SOLUTION.
 			IF:gross>99999&& <=99999
         nssf:
             nssf
-            IF: GROSS<=7000
+            IF: gross<=7000
                 RETURN: nssf = 0.06*gross
             IF: gross >7000
                 RETURN: nssf = 0.06*7000+0.06*(gross-7000)
