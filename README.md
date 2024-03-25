@@ -67,21 +67,21 @@ PSEUDOCODE SOLUTION.
 		INPUTS: basicSalary, benefits/allowance
 		grossSalary = basicSalary + benefits;
 		tax: 
-			IF: basicSalary<=24000
+			IF: grossSalary<=24000
 				RETURN: basicSalary*0.01
-			IF: basicSalary>24000 and <=32,333
+			IF: grossSalary>24000 and <=32,333
 				RETURN: basicSalary*0.25
-			IF: basicSalary>32,333 and <=500000
+			IF: grossSalary>32,333 and <=500000
 				RETURN: basicSalary*0.30
-			IF: basicSalary>500000 and <=800000
+			IF: grossSalary>500000 and <=800000
 				RETURN: basicSalary*0.325
-			IF: basicSalary>800000
+			IF: grossSalary>800000
 				RETURN: basicSalary*0.35
 			
 		
 		nhif:
 			IF:gross<=5999 
-			IF:gross>5999&& <=7999
+			IF:gross>5999&& <=7999 150
 			IF:gross>7999&& <=17999
 			IF:gross>11,999&& <=11999
 			IF:gross>14999&& <=14999
@@ -104,5 +104,5 @@ PSEUDOCODE SOLUTION.
             IF: gross >7000
                 RETURN: nssf = 0.06*7000+0.06*(gross-7000)
 
-		netSalaray =gross-(tax+Nssf+nhif)
+		netSalaray = gross-(tax(grossSalary)+Nssf(grossSalary)+nhif(grossSalary))
 		RETURN netSalary
